@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% block css%}
+  .cardbdy
+{
+  border:3px solid black;
+border-radius:5px;
+margin:10px;
+}
+.bpost
+{
+  color:#FFE5B4;
+  font-weight:bold;
+text-decoration:underline;
+}
+.cardcontt
+{
+  color:#FFFFF0;
+}
+h1
+{
+  margin-left:200px;
+  margin-top:20px;
+  color:#FCF5E5;
+  font-weight:bolder;
+font-style:italics;
+}
+
+{% endblock%}
+{% block body %}
+<div class="container">
+   <h1>Welcome to the Bloggers Blogs.</h1>
+    {%  for item in blogs %}
+     <div class="media cardbdy">
+         <div class="media-body my-2 mx-2">
+             <h5 class="mt-0 "><a class="bpost" href="/blogppost/{{item.slug}}">{{item.title}}</a></h5>
+             <p class="cardcontt">{{item.content|slice:245}}</p>
+             <div >
+                 <button class="btn btn-primary my-2 mx-3">Read more...</button>
+             </div>
+
+         </div>
+
+     </div>
+
+
+    {% endfor %}
+</div>
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

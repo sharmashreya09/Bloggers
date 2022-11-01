@@ -1,0 +1,330 @@
+{% extends 'base.html' %}
+{% block css %}
+.darkk
+{
+  font-size:24px;
+  font-weight:bold;
+  font-style:italics;
+
+}
+.cont
+{
+   margin-left:590px;
+}
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Oswald', sans-serif;
+}
+/*Base Styles******************/
+
+
+#wrapper {
+    width: 650px;
+
+    margin: 0 auto;
+}
+
+label {
+    font-size: 17px;
+    letter-spacing: 1px;
+}
+
+hr {
+    width: 65%;
+    margin: 0 auto;
+    margin-top: 45px;
+    border-top: 2px solid #000;
+    border-style: outset;
+    opacity: .2;
+}
+
+/*Header********************/
+
+
+
+
+/*Form***********************/
+
+form {
+    background: #2E2E2E;
+    color: #fff;
+    padding-bottom: 130px;
+
+}
+
+form .head-para {
+    text-align: center;
+    padding: 40px 55px;
+    letter-spacing: 1.1px;
+    font-size: 18px;
+}
+
+input[type="text"],[type="email"] {
+    display: block;
+    width: 340px;
+    height: 45px;
+    margin: 0 auto;
+    margin-top: 25px;
+    padding-left: 20px;
+    border-radius: 4px;
+    border-style: none;
+    opacity: .9;
+}
+
+input::placeholder {
+    font-size: 17px;
+    font-style: italic;
+    opacity: .3;
+}
+
+
+input:focus {
+    outline: 2px solid rgb(5, 209, 15);
+    box-shadow: 0 0 5px 1px rgb(5, 209, 15);
+    opacity: 1;
+    font-size: 17px;
+}
+
+/*Fieldset**********************/
+
+fieldset {
+    background: #4D4D4D;
+    width: 69%;
+    margin: 0 auto;
+    margin-top: 40px;
+    border-color: #810000;
+    height: auto;
+    padding: 0 20px 20px;
+}
+
+legend {
+    font-size: 22px;
+    padding-left: 8px;
+}
+
+input[type="radio"] {
+    opacity: 0;
+    width: 0;
+    margin: 0;
+}
+
+
+label[for="yes"], label[for="no"],
+label[for="yes1"], label[for="no1"],
+label[for="yes2"], label[for="no2"],
+label[for="yes3"], label[for="no3"] {
+    display: inline-block;
+    padding-left: 28px;
+    margin-bottom: 4px;
+    line-height: 27px;
+    padding-top: 2px;
+    cursor: pointer;
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4130348/checkbox.png) no-repeat;
+    background-position: 0 -58px;
+}
+
+input:checked + label[for="yes"],
+input:checked + label[for="no"],
+input:checked + label[for="yes1"],
+input:checked + label[for="no1"],
+input:checked + label[for="yes2"],
+input:checked + label[for="no2"],
+input:checked + label[for="yes3"],
+input:checked + label[for="no3"] {
+    background-position: 0 -5px;
+    color: rgb(5, 209, 15);
+}
+
+/**********************************************************/
+
+input[type="checkbox"] {
+    opacity: 0;
+    width: 0;
+    margin: 0;
+}
+
+label[for="dogs"],
+label[for="cats"],
+label[for="none"],
+label[for="0"],
+label[for="1-2"],
+label[for="2+"] {
+    display: inline-block;
+    padding-left: 30px;
+    margin-bottom: 6px;
+    line-height: 27px;
+    padding-top: 2px;
+    cursor: pointer;
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4130348/checkbox2.png) no-repeat;
+    background-position: 0 -58px;
+}
+
+input:checked + label[for="dogs"],
+input:checked + label[for="cats"],
+input:checked + label[for="none"],
+input:checked + label[for="0"],
+input:checked + label[for="1-2"],
+input:checked + label[for="2+"] {
+    background-position: 0 -6px;
+    color: rgb(5, 209, 15);
+}
+
+
+
+
+/*Question1**********************/
+label[for="time"] {
+    display: inline-block;
+    padding-top: 55px;
+}
+
+select[id="time"] {
+    width: 110px;
+    padding: 10px 0 10px 10px;
+    margin-left: 25px;
+    box-shadow: 0 3px 5px rgba(0,0,0,0.3);
+}
+
+
+
+
+/*Question2*********************/
+label[for="story"] {
+    display: inline-block;
+    padding-top: 25px;
+}
+
+textarea {
+    display: block;
+    margin-top: 7px;
+    width: 425px;
+    min-height: 110px;
+    position: relative;
+    z-index: 10;
+}
+
+.t-area-shadow {
+    width: 90%;
+    height: 12px;
+    position: relative;
+    transform-origin: left;
+    left: 9%;
+    top: 88px;
+    background: rgba(0,0,0,0.5);
+    transform: skewY(6deg);
+    z-index: 1;
+    filter: blur(5px);
+}
+
+.question {
+    padding: 20px 0 15px;
+    font-size: 17px;
+}
+
+
+/*extra*************************/
+.extra {
+   width: 72%;
+   margin: 0 auto;
+   padding-top: 20px;
+   padding-left: 20px;
+}
+
+select#trait {
+    display: inline-block;
+    width: 190px;
+    padding: 10px 0 10px 5px;
+    margin-left: 34px;
+    box-shadow: 0 3px 5px rgba(0,0,0,0.6);
+}
+
+
+/*Submit**********************/
+button {
+    display: block;
+    width: 210px;
+    height: 60px;
+    margin: 0 auto;
+    margin-top: 120px;
+    font-size: 24px;
+    text-transform: uppercase;
+    background: #810000;
+    color: #fff;
+    border-style: none;
+    border-radius: 6px;
+    box-shadow: 0 6px 0 #aa0000;
+    cursor: pointer;
+}
+
+.blank
+{
+    height:300px;
+}
+
+
+
+{% endblock %}
+{% block body %}
+<div class="alert alert-dark darkk" role="alert">
+    <p class="cont">Write your Blog here !!</p>
+</div>
+
+<div id="wrapper">
+
+
+
+            <form  action='/blog' method='post'>{% csrf_token %}
+            <p class="head-para">Fill out the fields carefully!!
+             Choose a catchy title with all your amazing
+              content . Don't forget to put the unique slug.</p>
+
+
+            <input type="text" id="firstname" placeholder="first_name" name="Firstname">
+
+            <input type="text" id="lastname" placeholder="last_name" name="Lastname">
+
+            <input type="email" id="email" placeholder="email" name="email">
+
+            <hr />
+
+            <fieldset>
+
+                 Give a suitable title to your blog !!
+                 <input type="text" name="title" placeholder="title of the blog">
+
+                <br><br>
+
+                <label for="story">Content of the Blog .</label>
+                <br>
+                <div class="t-area-shadow"></div>
+                <textarea id="story" name="content"></textarea>
+                <br><br>
+              <p>Give a unique slug </p>
+              <input type="text" name="slug" placeholder="Slug for  the blog">
+
+            </fieldset>
+
+            <hr />
+
+
+
+
+            <button type="submit">Post</button>
+            </form>
+
+    </div>
+<div class="blank"></div>
+<footer class="text-center text-white " style="background-color: #21081a;">
+  <div class="container p-4"></div>
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2022 Copyright:
+    <a class="text-white" href="https://mdbootstrap.com/">Bloggers.com</a>
+  </div>
+</footer>
+
+
+{% endblock %}
+
+
